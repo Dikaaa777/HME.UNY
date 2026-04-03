@@ -12,6 +12,7 @@ html{
 body{
   background:#fff;
   color:#111;
+  padding-top:80px; /* FIX navbar */
 }
 
 /* NAVBAR */
@@ -34,7 +35,17 @@ body{
   box-shadow:0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* NAV LINKS */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img{
+  width:40px;
+}
+
+/* NAV */
 .nav-links{
   display:flex;
 }
@@ -70,7 +81,7 @@ body{
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:120px 20px 40px;
+  padding:40px 20px;
   background:linear-gradient(to bottom,#ffffff,#f8fafc);
 }
 
@@ -97,7 +108,7 @@ body{
   background:transparent;
   cursor:pointer;
   font-weight:600;
-  transition:all 0.3s ease;
+  transition:0.3s;
 }
 
 .btn.primary{
@@ -157,11 +168,11 @@ section{
   border-radius:50%;
 }
 
-/* ANIMATION */
+/* ANIMATION FIX */
 .reveal{
   opacity:0;
   transform:translateY(60px);
-  transition:all 0.8s ease;
+  transition:0.8s;
 }
 
 .reveal.active{
