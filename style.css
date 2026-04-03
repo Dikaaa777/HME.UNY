@@ -23,7 +23,7 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:18px 60px;
-  background:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.6);
   backdrop-filter:blur(10px);
   transition:0.3s;
   z-index:1000;
@@ -97,7 +97,7 @@ body{
   background:transparent;
   cursor:pointer;
   font-weight:600;
-  transition:all 0.3s cubic-bezier(0.2,0.65,0.3,0.9);
+  transition:all 0.3s ease;
 }
 
 .btn.primary{
@@ -157,11 +157,11 @@ section{
   border-radius:50%;
 }
 
-/* REVEAL */
+/* ANIMATION */
 .reveal{
   opacity:0;
   transform:translateY(60px);
-  transition:all 0.8s cubic-bezier(0.2,0.65,0.3,0.9);
+  transition:all 0.8s ease;
 }
 
 .reveal.active{
