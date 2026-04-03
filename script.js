@@ -9,7 +9,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// REVEAL ANIMATION
+// REVEAL
 const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
