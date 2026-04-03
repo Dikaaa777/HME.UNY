@@ -9,10 +9,11 @@ window.addEventListener('scroll', () => {
   }
 });
 
+
 // REVEAL
 const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
+function revealOnScroll(){
   reveals.forEach(el => {
     const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
@@ -21,4 +22,9 @@ window.addEventListener("scroll", () => {
       el.classList.add("active");
     }
   });
-});
+}
+
+window.addEventListener("scroll", revealOnScroll);
+
+// FIX: langsung aktif saat load
+window.addEventListener("load", revealOnScroll);
