@@ -1,10 +1,11 @@
-// NAVBAR SCROLL
+// NAVBAR EFFECT
 const navbar = document.getElementById('navbar');
+
 window.addEventListener('scroll', () => {
   if(window.scrollY > 50){
-    navbar.style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
+    navbar.classList.add('scrolled');
   } else {
-    navbar.style.boxShadow = "none";
+    navbar.classList.remove('scrolled');
   }
 });
 
