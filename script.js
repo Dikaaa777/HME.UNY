@@ -1,62 +1,75 @@
-// NAVBAR EFFECT
-const navbar = document.getElementById('navbar');
+/* POPUP */
+.popup{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:2000;
+}
 
-window.addEventListener('scroll', () => {
-  if(window.scrollY > 50){
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
+.popup-content{
+  background:#fff;
+  padding:40px;
+  border-radius:16px;
+  text-align:center;
+}
+
+.popup img{
+  width:100px;
+}
+
+/* SLIDER */
+.slider{
+  display:flex;
+  gap:15px;
+  overflow-x:auto;
+  margin-top:40px;
+}
+
+.slide{
+  min-width:250px;
+  padding:15px;
+  border-radius:12px;
+  background:#f8fafc;
+  transition:0.3s;
+}
+
+.slide:hover{
+  transform:translateY(-3px);
+}
+
+/* CONTACT */
+.contact-box{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-top:20px;
+}
+
+.contact-box a{
+  padding:10px 18px;
+  background:#25D366;
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+}
+
+/* FIX MOBILE VISI MISI */
+@media(max-width:768px){
+
+  .vm-row{
+    flex-direction:column;
+    text-align:center;
   }
-});
 
-// REVEAL
-const reveals = document.querySelectorAll(".reveal");
+  .vm-row.reverse{
+    flex-direction:column;
+  }
 
-function revealOnScroll(){
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-
-    if(elementTop < windowHeight - 100){
-      el.classList.add("active");
-    }
-  });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
-
-// POPUP
-function closePopup(){
-  document.getElementById("welcomePopup").style.display = "none";
-}
-
-// POPUP ONCE
-window.onload = function(){
-  if(localStorage.getItem("visited")){
-    document.getElementById("welcomePopup").style.display = "none";
-  } else {
-    localStorage.setItem("visited", "true");
+  .vm-text{
+    margin-top:20px;
   }
 }
-
-// SLIDER DUMMY
-const slider = document.getElementById("slider");
-
-const data = [
-  {judul:"Workshop AI", isi:"Belajar AI dasar"},
-  {judul:"Pelatihan PLC", isi:"Skill industri"},
-  {judul:"Pengabdian", isi:"Teknologi untuk desa"}
-];
-
-data.forEach(item => {
-  const div = document.createElement("div");
-  div.classList.add("slide");
-
-  div.innerHTML = `
-    <h3>${item.judul}</h3>
-    <p>${item.isi}</p>
-  `;
-
-  slider.appendChild(div);
-});
