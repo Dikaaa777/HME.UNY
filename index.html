@@ -11,6 +11,16 @@
 
 <body>
 
+<!-- POPUP -->
+<div id="welcomePopup" class="popup">
+  <div class="popup-content">
+    <img src="logo.PNG">
+    <h2>Selamat Datang</h2>
+    <p>KABINET TRIDAYA CAKRAWARDHANA</p>
+    <button onclick="closePopup()">Masuk</button>
+  </div>
+</div>
+
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="logo">
@@ -23,19 +33,13 @@
     <a href="#about">About</a>
     <a href="#program">Program</a>
     <a href="#contact">Contact</a>
+    <a href="login.html">Admin</a>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO (SLIDER) -->
 <section class="hero" id="home">
-  <h1 class="reveal">Selamat Datang</h1>
-  <h1 class="reveal">KABINET TRIDAYA CAKRAWARDHANA</h1>
-  <p class="reveal">Bersatu, Bersama-sama, Satu Tujuan</p>
-
-  <div class="buttons reveal">
-    <a href="#about" class="btn primary">Profil HME</a>
-    <a href="#program" class="btn secondary">Lihat Program</a>
-  </div>
+  <div class="slider" id="slider"></div>
 </section>
 
 <!-- ABOUT -->
@@ -60,7 +64,7 @@
     <div class="vm-text">
       <h3>Visi</h3>
       <p>
-        Mewujudkan Himpunan Mahasiswa Elektro UNY sebagai organisasi yang berintegritas, profesional, dan progresif, yang menjadi poros penggerak perubahan serta pusat pengembanagan teknologi, akademik, dan karakter mahasiswa di lingkungan Departemen Pendidikan Teknik Elektro.
+        Mewujudkan HME sebagai organisasi yang profesional dan progresif.
       </p>
     </div>
   </div>
@@ -79,9 +83,9 @@
     <div class="vm-text">
       <h3>Misi</h3>
       <ul>
-        <li>Meningkatkan kualitas tata kelola organisasi melalui sistem kerja yang rapi. akuntabel, dan berorientasi pada pelayanan mahasiswa.</li>
-        <li>Mengembangkan kaderisasi yang terstruktur dan berkelanjutan untuk membentuk mahasiswa yang berkarakter, kompeten, dan siap berkontribusi.</li>
-        <li>Menyediakan ruang pengembangan akademik dan teknologi yang mudah diakses, relevan, dan mendukung peningkatan kemampuan mahasiswa.</li>
+        <li>Meningkatkan kualitas organisasi</li>
+        <li>Mengembangkan kaderisasi</li>
+        <li>Menyediakan ruang teknologi</li>
       </ul>
     </div>
   </div>
@@ -91,18 +95,18 @@
 <section id="program">
   <h2 class="section-title reveal">Program Kerja</h2>
   <p class="section-text reveal">
-    Workshop teknologi, riset kolaboratif, pelatihan skill industri,
-    serta kegiatan pengabdian masyarakat berbasis teknologi.
+    Workshop teknologi, pelatihan skill, dan pengabdian masyarakat.
   </p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <h2 class="section-title reveal">Kontak</h2>
-  <p class="section-text reveal">
-    Email: himaelektrouny@gmail.com<br>
-    Instagram: @hme.uny
-  </p>
+  <div class="contact-box reveal">
+    <a href="https://wa.me/6281234567890" target="_blank">Ketua</a>
+    <a href="https://wa.me/6281234567890" target="_blank">Humas</a>
+    <a href="https://wa.me/6281234567890" target="_blank">Medinfo</a>
+  </div>
 </section>
 
 <footer>
